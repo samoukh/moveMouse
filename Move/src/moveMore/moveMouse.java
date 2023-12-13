@@ -21,8 +21,9 @@ public class moveMouse {
 	    	Date endDate;
 	    	if (args.length == 0) {
 	    		endDate= new Date();
-	    		endDate.setHours(17);
-	    		endDate.setMinutes(30);
+	    		endDate.setHours(18);
+	    		endDate.setMinutes(00);
+	    		endDate.setSeconds(00);
 	    	}else {
 	    		endDate= formatter.parse(args[0]);
 	    	}
@@ -32,8 +33,7 @@ public class moveMouse {
 			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 			Random n = new Random();
 			Robot r = new Robot();
-			//while(endDate.after(new Date())) {
-			while(true) {
+			while(endDate.after(new Date())) {
 				r.delay(5000);
 				int x=n.nextInt(screenSize.height);
 				int y=n.nextInt(screenSize.width);
